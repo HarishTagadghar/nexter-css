@@ -6,8 +6,8 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 62.5%; }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -18,9 +18,15 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  .container > * {
-    padding: 4rem;
-    font-size: 3rem; }
+
+.heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+  .heading-4-dark {
+    font-size: 1.5rem;
+    color: #6D5D4B;
+    text-transform: uppercase;
+    letter-spacing: .3rem; }
 
 .sidebar {
   background-color: #c69963;
@@ -35,8 +41,25 @@ body {
   grid-column: col-start 7 / full-end; }
 
 .features {
-  background-color: #f9f7f6;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  margin: 15rem 0; }
+  .features .feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+    align-items: start; }
+    .features .feature-icon {
+      width: 4.5rem;
+      height: 4.5rem;
+      fill: #c69963;
+      grid-row: 1/span 2;
+      transform: translateY(-1rem); }
+    .features .feature .heading-text {
+      font-size: 1.5rem; }
 
 .story-pictures {
   background-color: #101d2c;
