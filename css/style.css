@@ -56,7 +56,32 @@ body {
 
 .sidebar {
   background-color: #c69963;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center;
+  cursor: pointer; }
+
+.nav-btn {
+  border: none;
+  border-radius: none;
+  height: 2px;
+  width: 3.5rem;
+  background-color: #fff;
+  margin-top: 4rem; }
+  .nav-btn::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 3.5rem;
+    background-color: #fff;
+    transform: translateY(1.3rem); }
+  .nav-btn::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 3.5rem;
+    background-color: #fff;
+    transform: translateY(-1.5rem); }
 
 .header {
   background-color: #101d2c;
