@@ -118,19 +118,70 @@ body {
   .story-content-text {
     font-size: 1.5rem;
     font-weight: 400; }
-  .story-content-btn {
-    color: #f9f7f6;
-    background-color: #c69963;
-    padding: 1.8rem 2rem;
-    font-size: 2.5rem;
-    border: none;
-    transition: all .2s; }
-  .story-content-btn:hover {
-    background-color: #B28451; }
+
+.btn {
+  color: #f9f7f6;
+  background-color: #c69963;
+  padding: 1.5rem 2rem;
+  font-size: 2.5rem;
+  border: none;
+  transition: all .2s; }
+
+.btn:hover {
+  background-color: #B28451; }
 
 .homes {
-  background-color: #aaa;
-  grid-column: center-start /center-end; }
+  grid-column: center-start /center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem; }
+
+.home {
+  background-color: #f9f7f6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3.5rem; }
+  .home-img {
+    grid-row: 1/2;
+    width: 100%;
+    grid-column: 1/ -1;
+    z-index: 1; }
+  .home-name {
+    grid-column: 1/ -1;
+    grid-row: 1/2;
+    font-size: 1.6rem;
+    padding: 2rem;
+    background-color: #101d2c;
+    color: #ffffff;
+    text-align: center;
+    width: 80%;
+    justify-self: center;
+    align-self: end;
+    z-index: 3;
+    transform: translateY(50%); }
+  .home-like {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    fill: #c69963;
+    width: 2rem;
+    height: 2rem;
+    justify-self: end;
+    margin: 1rem;
+    z-index: 2; }
+  .home-location, .home-rooms {
+    margin-top: 2.5rem; }
+  .home-location, .home-rooms, .home-area, .home-price {
+    margin-left: 2.5rem;
+    display: flex;
+    font-size: 1.2rem; }
+    .home-location svg, .home-rooms svg, .home-area svg, .home-price svg {
+      fill: #c69963;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem; }
+  .home-btn {
+    grid-column: 1/ -1; }
 
 .gallery {
   background-color: #f9f7f6;
